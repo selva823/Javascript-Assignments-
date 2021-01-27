@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- Question 1  -->
+    <h2>We can access elements in 3 ways: <br>
+        1.By TagName : <code>document.getElementsByTagName();</code> <br>
+        2.By className : <code>document.getElementsByClassName();</code> <br>
+        3.By idName : <code>document.getElementById();</code>
+    </h2>
+
+    <!-- Question 2 -->
+    <label for="">Enter 1st No.</label> <br>
+    <input type="text"> <br>
+    <label for="">Enter 2st No.</label> <br>
+    <input type="text"> <br>
+    <button onclick="add()">Add</button> <br>
+    <label for="">Result</label> <br>
+    <input type="text">
+
+
+    <script>
+        function add() {
+
+            const v1 = document.getElementsByTagName("input")[0].value;
+            const v2 = document.getElementsByTagName("input")[1].value;
+            const v3 = +v1 + +v2;
+            document.getElementsByTagName("input")[2].value = v3;
+        }
+    </script>
+</body>
+
+</html>
